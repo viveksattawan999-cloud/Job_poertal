@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom'
+function EmptyState({ icon: Icon, title, description, actionLabel, actionTo }) { return <div className="rounded-xl border border-dashed border-slate-300 bg-white px-6 py-12 text-center"><Icon className="mx-auto text-slate-400" size={32} /><h2 className="mt-4 text-lg font-semibold text-slate-900">{title}</h2><p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-500">{description}</p>{actionLabel && <Link to={actionTo} className="mt-5 inline-flex rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-700">{actionLabel}</Link>}</div> }
+export default EmptyState

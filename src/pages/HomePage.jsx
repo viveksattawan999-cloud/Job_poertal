@@ -1,0 +1,8 @@
+import { ArrowRight, Search } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+function HomePage() {
+  return <><section className="bg-linear-to-br from-brand-50 via-white to-slate-50"><div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"><div className="max-w-3xl"><span className="rounded-full bg-brand-100 px-3 py-1 text-sm font-semibold text-brand-700">Your next opportunity starts here</span><h1 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">Find a role where your work can thrive.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">JobHub connects talented people with teams building the future.</p><div className="mt-8 flex flex-wrap gap-4"><Link to="/jobs" className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-5 py-3 font-semibold text-white shadow-sm hover:bg-brand-700">Browse jobs <ArrowRight size={18} /></Link><Link to="/register" className="rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 hover:border-brand-300">Create an account</Link></div></div></div></section><section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"><div className="grid gap-5 md:grid-cols-3">{['Search smarter', 'Apply with confidence', 'Grow your career'].map((item) => <div key={item} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm"><Search className="mb-4 text-brand-600" size={22} /><h2 className="font-semibold text-slate-900">{item}</h2><p className="mt-2 text-sm leading-6 text-slate-600">The JobHub foundation is ready for this experience.</p></div>)}</div></section></>
+}
+
+export default HomePage
